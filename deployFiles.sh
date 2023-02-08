@@ -26,4 +26,4 @@ ENDSSH
 
 # Step 2
 printf "\n----> Copy the distribution package to the tartget.\n"
-scp -r -i "$key" * ubuntu@$hostname:services/$serivce/public
+scp -r -i "$key" * ubuntu@$hostname:services/$service/public
