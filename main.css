@@ -83,3 +83,35 @@ footer a{
     border: thick solid rgb(36, 53, 0);
 }
 
+.button-top-right{
+    border-radius: 0 100% 0 0;
+    margin: 20px 20px 0 0;
+    background-color: red;
+    border: thick solid rgb(83, 12, 12);
+}
+
+.button-bottom-right{
+    border-radius: 0 0 100% 0;
+    margin: 0 20px 20px 0;
+    background-color: blue;
+    border: thick solid rgb(27, 14, 100);
+}
+
+.contols{
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.game-name{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
