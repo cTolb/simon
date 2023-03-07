@@ -108,11 +108,6 @@ class Game {
         this.sequence.push(btn);
     }
 
-    addButton() {
-        const btn = this.getRandomButton();
-        this.sequence.push(btn);
-    }
-
     updateScore(score) {
         const scoreEl = document.querySelector('#score');
         scoreEl.textContent = score;
