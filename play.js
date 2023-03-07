@@ -6,7 +6,7 @@ const btnDescriptions = [
 ];
 
 class Button {
-    constructor (description, el){
+    constructor(description, el) {
         this.el = el;
         this.hue = description.hue;
         this.sound = loadSound(description.file);
@@ -24,7 +24,7 @@ class Button {
         this.paint(25);
     }
 
-    // Work around Safari's rule to only play sounds if given permission
+    // Work around Safari's rule to only play sounds if given permission.
     async play(volume = 1.0) {
         this.sound.volume = volume;
         await new Promise((resolve) => {
