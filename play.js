@@ -129,7 +129,7 @@ class Game {
     saveScore(score) {
         const userName = this.getPlayerName();
         let scores = [];
-        const scoreText = localStorage.getItem('scores');
+        const scoresText = localStorage.getItem('scores');
         if (scoresText) {
             scores = JSON.parse(scoresText);
         }
