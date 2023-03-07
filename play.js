@@ -6,7 +6,7 @@ const btnDescriptions = [
 ];
 
 class Button {
-    constructor(btnDescriptions, el){
+    constructor(description, el){
         this.el = el;
         this.hue = description.hue;
         this.sound = loadSound(description.file);
@@ -54,8 +54,8 @@ class Game {
             }
         });
 
-        const playerNaneEl = document.querySelector('.player-name');
-        playerNameE1.textContent = this.getPlayerName();
+        const playerNameEl = document.querySelector('.player-name');
+        playerNameEl.textContent = this.getPlayerName();
     }
 
     async pressButton(button) {
@@ -98,7 +98,7 @@ class Game {
     async playSequence() {
         await delay(500);
         for (const btn of this.sequence) {
-            await btn.press(1,0);
+            await btn.press(1.0);
             await delay(100);
         }
     }
@@ -129,7 +129,7 @@ class Game {
     saveScore(score) {
         const userName = this.getPlayerName();
         let scores = [];
-        const scoredText = localStorage.getItem('scores');
+        const scoreText = localStorage.getItem('scores');
         if (scoresText) {
             scores = JSON.parse(scoresText);
         }
