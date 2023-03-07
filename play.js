@@ -123,7 +123,7 @@ class Game {
 
     getRandomButton() {
         let buttons = Array.from(this.buttons.values());
-        return buttons[Math.floor(Math.randon() * this.buttons.size)];
+        return buttons[Math.floor(Math.random() * this.buttons.size)];
     }
 
     saveScore(score) {
