@@ -85,7 +85,7 @@ class Game {
         this.playerPlaybackPos = 0;
         this.sequence = [];
         this.updateScore('--');
-        await this.buttonDance();
+        await this.buttonDance(1);
         this.addButton();
         await this.playSequence();
         this.allowPlayer = true;
@@ -174,5 +174,5 @@ function delay(milliseconds) {
 }
 
 function loadSound(filename) {
-    return newAudio('assets/' + filename);
+    return new Audio('assets/' + filename);
 }
