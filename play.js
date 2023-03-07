@@ -155,7 +155,7 @@ class Game {
             scores.push(newScore);
         }
 
-        if(scores.length > 10) {
+        if (scores.length > 10) {
             scores.length = 10;
         }
 
