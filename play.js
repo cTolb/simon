@@ -6,13 +6,13 @@ const btnDescriptions = [
 ];
 
 class Button {
-    constructor(description, el){
+    constructor (description, el){
         this.el = el;
         this.hue = description.hue;
         this.sound = loadSound(description.file);
         this.paint(25);
     }
-    
+
     paint(level) {
         const background = `hsl(${this.hue}, 100%, ${level}%)`;
         this.el.style.backgroundColor = background;
@@ -49,7 +49,7 @@ class Game {
         this.mistakeSound = loadSound('error.mp3');
 
         document.querySelectorAll('.game-button').forEach((el, i) => {
-            if(i < btnDescriptions.length) {
+            if (i < btnDescriptions.length) {
                 this.buttons.set(el.id, new Button(btnDescriptions[i], el));
             }
         });
