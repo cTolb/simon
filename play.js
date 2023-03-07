@@ -26,7 +26,7 @@ class Button {
 
     // Work around Safari's rule to only play sounds if given permission
     async play(volume = 1.0) {
-        this.sounds.volume = volume;
+        this.sound.volume = volume;
         await new Promise((resolve) => {
             this.sound.onended = resolve;
             this.sound.play();
